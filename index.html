@@ -3,45 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charukhan E - Software Developer | Python | Java | GenAI</title>
+<title>Charukhan E - Gen AI Developer</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
-body{background:#ffffff;color:#111;display:flex}
-.menu-btn{position:fixed;top:16px;left:16px;z-index:100;background:#111;color:white;padding:12px 14px;border-radius:10px;cursor:pointer;font-size:22px;border:1px solid #111}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fff;color:#111;overflow-x:hidden}
+.menu-btn{position:fixed;top:16px;left:16px;z-index:100;background:#111;color:white;padding:12px 14px;border-radius:10px;cursor:pointer;font-size:22px}
 .sidebar{width:280px;background:#0a0a0a;color:white;height:100vh;position:fixed;left:-280px;top:0;transition:0.3s;padding:26px;z-index:99;overflow-y:auto}
 .sidebar.open{left:0}
-.sidebar img{width:125px;height:125px;border-radius:50%;object-fit:cover;border:3px solid white;display:block;margin:22px auto 12px;filter:grayscale(100%)}
-.sidebar h2{text-align:center;font-size:21px;letter-spacing:1px}
-.sidebar p{text-align:center;color:#aaa;font-size:13px;margin:8px 0 20px;line-height:1.5}
-.sidebar a{display:block;color:white;text-decoration:none;padding:12px 14px;border-radius:8px;margin:6px 0;border:1px solid #333;font-size:14px}
-.sidebar a:hover{background:white;color:black}
+.sidebar img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid white;display:block;margin:20px auto 10px;filter:grayscale(100%)}
+.sidebar h2{text-align:center;font-size:20px}
+.sidebar p{text-align:center;color:#aaa;font-size:12px;margin:8px 0 20px;line-height:1.5}
+.sidebar a{display:block;color:white;text-decoration:none;padding:13px 14px;border-radius:8px;margin:6px 0;border:1px solid #333;font-size:14px;cursor:pointer}
+.sidebar a:hover,.sidebar a.active{background:white;color:black}
 .hire{background:white !important;color:black !important;font-weight:bold;text-align:center}
-.main{flex:1;padding:28px 18px;max-width:920px;margin:auto;width:100%}
-.topbar{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #111;padding-bottom:14px;margin-bottom:20px}
-.topbar b{font-size:13px;letter-spacing:1px}
-.hero{border:2px solid #111;border-radius:16px;padding:28px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;background:#fff}
-.hero img{width:155px;height:155px;border-radius:50%;object-fit:cover;border:3px solid #111;filter:grayscale(100%)}
-.hero h1{font-size:36px;line-height:1.1}
-.hero h1 span{font-weight:400;font-size:20px;color:#555}
-.hero p{margin-top:10px;line-height:1.6;color:#333}
-.btn{display:inline-block;background:#111;color:white;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:12px;margin-right:8px;font-size:14px;border:1px solid #111}
-.btn2{display:inline-block;background:white;color:#111;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:12px;font-size:14px;border:1px solid #111}
-.wiki{border:1px solid #ddd;border-radius:16px;padding:24px;margin:22px 0}
-.wiki h2{border-bottom:2px solid #111;padding-bottom:8px;font-size:22px}
-.wiki p{line-height:1.8;color:#333;margin-top:12px}
-.wiki table{width:100%;margin-top:14px;border-collapse:collapse;font-size:14px}
-.wiki td{padding:8px 6px;border-bottom:1px solid #eee}
-.wiki td:first-child{font-weight:bold;width:130px}
-.section{margin:24px 0}
-.section h2{font-size:22px;border-left:6px solid #111;padding-left:10px;margin-bottom:14px}
-.tag{display:inline-block;border:1px solid #111;padding:7px 12px;border-radius:20px;margin:5px 5px 0 0;font-size:13px;background:white}
-.card{border:1px solid #ddd;border-radius:14px;padding:18px;margin:12px 0;background:#fafafa}
-.card h3{font-size:17px}
+.main{max-width:750px;margin:auto;padding:70px 20px 30px;min-height:100vh;text-align:center}
+.page{display:none}
+.page.active{display:block}
+.home-pic{width:230px;height:230px;border-radius:50%;object-fit:cover;border:4px solid #111;filter:grayscale(100%);margin:22px auto;display:block}
+.home-name{font-size:44px;letter-spacing:1px;line-height:1.1}
+.home-role{font-size:18px;color:#555;margin-top:10px}
+.welcome{margin-top:14px;font-size:15px;color:#888}
+.about-box{border:1px solid #ddd;border-radius:16px;padding:22px;margin-top:24px;text-align:left}
+.about-box h2{font-size:20px;border-bottom:2px solid #111;padding-bottom:8px;margin-bottom:12px}
+.about-box p{line-height:1.8;color:#333;font-size:14px}
+.left{text-align:left}
+.left h2{font-size:26px;border-left:6px solid #111;padding-left:10px;margin-bottom:16px;text-align:left}
+.card{border:1px solid #ddd;border-radius:14px;padding:18px;margin:12px 0;text-align:left;background:#fafafa}
+.card h3{font-size:16px}
 .card p{color:#444;line-height:1.6;margin-top:6px;font-size:14px}
 .card small{background:#111;color:white;padding:4px 8px;border-radius:20px;font-size:11px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:650px){.grid{grid-template-columns:1fr}.hero h1{font-size:28px}}
-.footer{text-align:center;color:#888;padding:22px;font-size:13px;border-top:1px solid #eee;margin-top:20px}
+.tag{display:inline-block;border:1px solid #111;padding:7px 12px;border-radius:20px;margin:5px 5px 0 0;font-size:13px}
+.btn{display:inline-block;background:#111;color:white;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:14px}
+.hint{margin-top:18px;color:#888;font-size:13px}
 </style>
 </head>
 <body>
@@ -51,83 +44,62 @@ body{background:#ffffff;color:#111;display:flex}
 <div class="sidebar" id="side">
 <img src="photo.jpg" alt="Charukhan">
 <h2>CHARUKHAN E</h2>
-<p>B.E. ECE | Software Developer<br>Python | Java | JavaScript | GenAI<br>Chennai, India</p>
-<a href="#home" onclick="toggle()">Home</a>
-<a href="#about" onclick="toggle()">About Me</a>
-<a href="#projects" onclick="toggle()">Projects</a>
-<a href="#internship" onclick="toggle()">Internships</a>
-<a href="#skills" onclick="toggle()">Skills</a>
-<a href="#contact" onclick="toggle()">Contact</a>
-<a href="#contact" onclick="toggle()" class="hire">HIRE ME →</a>
+<p>Gen AI Developer<br>Chennai, India</p>
+<a onclick="showPage('home',this)" class="active">Home</a>
+<a onclick="showPage('about',this)">About Me</a>
+<a onclick="showPage('projects',this)">Projects</a>
+<a onclick="showPage('internship',this)">Internships</a>
+<a onclick="showPage('skills',this)">Skills</a>
+<a onclick="showPage('contact',this)">Contact</a>
+<a onclick="showPage('contact',this)" class="hire">HIRE ME →</a>
 </div>
 
 <div class="main">
-<div class="topbar"><b>CHARUKHAN E / PORTFOLIO</b><b>CHENNAI • 2026</b></div>
 
-<div class="hero" id="home">
-<img src="photo.jpg" alt="Charukhan">
-<div style="flex:1;min-width:260px">
-<h1>CHARUKHAN E<br><span>Aspiring Software Developer</span></h1>
-<p><b>Python | Java | JavaScript | GenAI</b><br>B.E. Electronics & Communication Engineering, Loyola Institute of Technology, CGPA 8.6/10. Building AI-based, data-driven and web applications.</p>
-<a href="#contact" class="btn">Hire Me</a>
-<a href="#projects" class="btn2">View Projects</a>
+<!-- HOME - ITHU MATTUM THAAN FIRST LA VARUM -->
+<div id="home" class="page active">
+<p class="welcome">WELCOME TO MY PAGE</p>
+<h1 class="home-name">CHARUKHAN E</h1>
+<p class="home-role">Gen AI Developer</p>
+<img src="photo.jpg" class="home-pic" alt="Charukhan">
+<div class="about-box">
+<h2>About Me - In Short</h2>
+<p>Hello, I am <b>Charukhan E</b> from Chennai, Tamil Nadu. I am a B.E. Electronics and Communication Engineering graduate (2026) from Loyola Institute of Technology, with CGPA 8.6/10.</p>
+<p>I am an aspiring Software Developer focused on <b>Python, Java, JavaScript and Generative AI</b>. I love building real, useful projects, not just theory.</p>
+<p>I have built AI-based agriculture projects, a Smart India Hackathon project, and a Final Year Project on Wireless Charging for Electric Vehicles. I have also completed 5 industry internships.</p>
+<p>My goal is simple: learn by building, and get a Software Development / GenAI role where I can grow and contribute.</p>
+<p><b>Click the 3 lines on top left to see my Projects, Skills and Contact.</b></p>
 </div>
-</div>
-
-<div class="wiki" id="about">
-<h2>About - Charukhan E</h2>
-<p><b>Charukhan E</b> is an Electronics and Communication Engineering graduate (2026) from <b>Loyola Institute of Technology, Chennai</b>, with hands-on experience in software and AI-based academic projects.</p>
-<p>He is proficient in <b>Python, Java and JavaScript</b>, with growing exposure to <b>Generative AI and AI/ML</b> through certified coursework. He has completed <b>5 industry internships</b> across Electronics, Automation and Logistics, and presented a paper at an International Conference.</p>
-<table>
-<tr><td>Name</td><td>Charukhan E</td></tr>
-<tr><td>Education</td><td>B.E. ECE, Loyola Institute of Technology, 2022-2026, CGPA 8.6/10</td></tr>
-<tr><td>Location</td><td>Chennai, Tamil Nadu, India</td></tr>
-<tr><td>Focus</td><td>Software Development / GenAI Role</td></tr>
-<tr><td>Languages</td><td>Tamil, English</td></tr>
-<tr><td>LinkedIn</td><td>linkedin.com/in/charukhan-e-16372b307</td></tr>
-</table>
+<p class="hint">☰ Left side menu ah click pannu - Projects, Skills ellam anga thaan irukku</p>
 </div>
 
-<div class="section" id="projects">
-<h2>Projects - From My Resume</h2>
-
+<!-- ABOUT -->
+<div id="about" class="page">
+<div class="left">
+<h2>About Me</h2>
 <div class="card">
-<small>FINAL YEAR PROJECT</small>
-<h3 style="margin-top:8px">Smart Charging System for Electric Vehicles Using Wireless Power Transfer</h3>
-<p>Parking & Travelling mode. Developed a real-time web dashboard for monitoring wireless charging data and automated parking / travel charging modes.</p>
-<p><b>Tech:</b> Embedded C, Python, IoT, Wireless Power Transfer, Real-Time Monitoring</p>
-<p><b>Achievement:</b> Presented paper at International Conference RATSTEm-2026, Loyola Institute of Technology.</p>
-</div>
-
-<div class="card">
-<small>AI / PYTHON / STREAMLIT</small>
-<h3 style="margin-top:8px">AI-Integrated Platform for Smart Agriculture</h3>
-<p>Python / Streamlit web app for crop yield prediction and leaf disease diagnosis, with NDVI-based analysis and an e-marketplace module for farmers.</p>
-<p><b>Tech:</b> Python, Streamlit</p>
-</div>
-
-<div class="card">
-<small>SMART INDIA HACKATHON - SIH</small>
-<h3 style="margin-top:8px">AI-Powered Crop Health Monitoring</h3>
-<p>Built an application using multispectral / hyperspectral imaging with a cloud-based data analytics pipeline for pest and soil risk monitoring.</p>
-<p><b>Tech:</b> AI, Cloud, Data Analytics</p>
-</div>
-
-<div class="grid">
-<div class="card">
-<small>EMBEDDED / PLC</small>
-<h3 style="margin-top:8px">Modern Touch-Sensor RGB LED Smart Table</h3>
-<p>Designed control firmware with PLC-based touch sensor input and RGB LED logic for interactive lighting response.</p>
-</div>
-<div class="card">
-<small>IOT / RASPBERRY PI</small>
-<h3 style="margin-top:8px">Smart Home Lighting Automation</h3>
-<p>Automated home lighting with sensor-based triggers and remote monitoring via a mini network.</p>
+<p><b>Charukhan E</b> is an ECE graduate (2026) from Loyola Institute of Technology, Chennai, with hands-on experience in software and AI-based academic projects.</p>
+<p style="margin-top:10px">Proficient in Python, Java and JavaScript, with Generative AI and AI/ML concepts through certified coursework. Strong problem-solving skills, backed by certified training.</p>
+<p style="margin-top:10px"><b>Education:</b> B.E. ECE - Loyola Institute of Technology - CGPA 8.6/10 - 2022 to 2026<br><b>HSC:</b> JMJ Matriculation - 76.8% - 2022<br><b>SSLC:</b> Sri Sankara Vidyalaya - 81.8% - 2020<br><b>Languages:</b> Tamil, English<br><b>Location:</b> Chennai, Tamil Nadu, India</p>
 </div>
 </div>
 </div>
 
-<div class="section" id="internship">
+<!-- PROJECTS -->
+<div id="projects" class="page">
+<div class="left">
+<h2>Projects</h2>
+<div class="card"><small>FINAL YEAR PROJECT</small><h3 style="margin-top:8px">Smart Charging System for EVs Using Wireless Power Transfer</h3><p>Real-time web dashboard for monitoring wireless charging data and automated parking / travel charging modes. Presented paper at International Conference RATSTEm-2026.</p><p><b>Tech:</b> Embedded C, Python, IoT, Wireless Power Transfer</p></div>
+<div class="card"><small>AI / PYTHON / STREAMLIT</small><h3 style="margin-top:8px">AI-Integrated Platform for Smart Agriculture</h3><p>Python / Streamlit web app for crop yield prediction and leaf disease diagnosis, with NDVI-based analysis and e-marketplace module for farmers.</p></div>
+<div class="card"><small>SMART INDIA HACKATHON - SIH</small><h3 style="margin-top:8px">AI-Powered Crop Health Monitoring</h3><p>Application using multispectral / hyperspectral imaging with cloud-based data analytics pipeline for pest and soil risk monitoring.</p></div>
+<div class="card"><small>EMBEDDED / PLC</small><h3 style="margin-top:8px">Modern Touch-Sensor RGB LED Smart Table</h3><p>Control firmware with PLC-based touch sensor input and RGB LED logic for interactive lighting response.</p></div>
+<div class="card"><small>IOT / RASPBERRY PI</small><h3 style="margin-top:8px">Smart Home Lighting Automation</h3><p>Automated home lighting with sensor-based triggers and remote monitoring via mini network.</p></div>
+</div>
+</div>
+
+<!-- INTERNSHIP -->
+<div id="internship" class="page">
+<div class="left">
 <h2>Internships - 5 Companies</h2>
 <div class="card"><h3>DNA Engineering - PLC Automation</h3><p>Chip board manufacturing, PLC logic development, I/O mapping, automation testing.</p></div>
 <div class="card"><h3>Schneider Electric</h3><p>Preventive maintenance, electrical inspection, fault documentation.</p></div>
@@ -135,33 +107,43 @@ body{background:#ffffff;color:#111;display:flex}
 <div class="card"><h3>Wipro Infrastructure</h3><p>Hydraulic component testing, inspection, documentation.</p></div>
 <div class="card"><h3>Sungwoo Hitech (Hyundai)</h3><p>Quality inspection, NCR documentation, corrective support.</p></div>
 </div>
-
-<div class="section" id="skills">
-<h2>Skills & Certifications</h2>
-<p style="margin-bottom:8px"><b>Programming:</b></p>
-<span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">Embedded C</span>
-<p style="margin:14px 0 8px"><b>AI / GenAI:</b></p>
-<span class="tag">Generative AI</span><span class="tag">AI/ML Fundamentals - NPTEL, IISc Bangalore</span><span class="tag">Prompt Engineering</span><span class="tag">Certified GenAI - TechPanda</span>
-<p style="margin:14px 0 8px"><b>Tools:</b></p>
-<span class="tag">PyCharm</span><span class="tag">Streamlit</span><span class="tag">VS Code</span><span class="tag">MATLAB</span><span class="tag">Git</span><span class="tag">Zoho Creator</span>
-<div class="card" style="margin-top:14px"><p><b>Other Certifications:</b> Zoho Creator Student Training - Young Creators Program (2025) • GenAI Workshop - Object Automation / IBM Partner (2023) • Core Concepts of Java - DevTown (2024) • Placement Aptitude Training 40 hrs - AptrikZ (2025)</p></div>
 </div>
 
-<div class="section" id="contact">
+<!-- SKILLS -->
+<div id="skills" class="page">
+<div class="left">
+<h2>Skills</h2>
+<div class="card"><p><b>Programming:</b></p><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">Embedded C</span><p style="margin-top:14px"><b>AI / GenAI:</b></p><span class="tag">Generative AI</span><span class="tag">Prompt Engineering</span><span class="tag">AI/ML - NPTEL IISc</span><span class="tag">Certified GenAI - TechPanda</span><p style="margin-top:14px"><b>Tools:</b></p><span class="tag">PyCharm</span><span class="tag">Streamlit</span><span class="tag">VS Code</span><span class="tag">MATLAB</span><span class="tag">Git</span><span class="tag">Zoho Creator</span></div>
+<div class="card"><h3>Certifications</h3><p>Certified Generative AI - TechPanda • Zoho Creator - Young Creators Program (2025) • AI Concepts - NPTEL, IISc Bangalore (2025) • GenAI Workshop - IBM Partner (2023) • Core Java - DevTown (2024) • Aptitude Training 40 hrs - AptrikZ (2025)</p><p style="margin-top:8px"><b>Achievements:</b> Paper at RATSTEm-2026 • Smart India Hackathon Participant • 5 Internships</p></div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+<div class="left">
 <h2>Contact - Hire Me</h2>
-<div class="card" style="background:#111;color:white">
-<h3 style="color:white">Open to Entry-Level Software Development / GenAI Roles</h3>
-<p style="color:#ccc">Email: charukhancharukh@gmail.com<br>Phone: 8220787480<br>LinkedIn: linkedin.com/in/charukhan-e-16372b307<br>Location: Chennai, Tamil Nadu, India</p>
-<a href="mailto:charukhancharukh@gmail.com" class="btn" style="background:white;color:black">Send Email</a>
+<div class="card" style="background:#111;color:white;text-align:center">
+<h3 style="color:white;font-size:20px">Open to Software / GenAI Roles</h3>
+<p style="color:#ccc;margin-top:10px">Email: charukhancharukh@gmail.com<br>Phone: 8220787480<br>LinkedIn: linkedin.com/in/charukhan-e-16372b307<br>Location: Chennai, Tamil Nadu, India</p>
+<a href="mailto:charukhancharukh@gmail.com" class="btn" style="background:white;color:black">Send Email</a><br>
 <a href="https://www.linkedin.com/in/charukhan-e-16372b307/" class="btn" style="background:transparent;color:white;border:1px solid white">LinkedIn Profile</a>
 </div>
 </div>
+</div>
 
-<div class="footer">© 2026 Charukhan E - B.E. ECE, Loyola Institute of Technology, Chennai</div>
+<p style="text-align:center;color:#aaa;font-size:12px;margin-top:20px">© 2026 Charukhan E - Chennai</p>
 </div>
 
 <script>
 function toggle(){document.getElementById('side').classList.toggle('open')}
+function showPage(id,el){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('.sidebar a').forEach(a=>a.classList.remove('active'));
+if(el) el.classList.add('active');
+document.getElementById('side').classList.remove('open');
+window.scrollTo(0,0);
+}
 </script>
 </body>
 </html>
