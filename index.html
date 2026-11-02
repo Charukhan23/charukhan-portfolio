@@ -6,34 +6,38 @@
 <title>Charukhan E - Gen AI Developer</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#fff;color:#111;overflow-x:hidden}
-.menu-btn{position:fixed;top:16px;left:16px;z-index:100;background:#111;color:white;padding:12px 14px;border-radius:10px;cursor:pointer;font-size:22px}
-.sidebar{width:280px;background:#0a0a0a;color:white;height:100vh;position:fixed;left:-280px;top:0;transition:0.3s;padding:26px;z-index:99;overflow-y:auto}
+body{background:#f8f5ff;color:#1a1a2e}
+.menu-btn{position:fixed;top:16px;left:16px;z-index:100;background:#7c3aed;color:white;padding:12px 15px;border-radius:12px;cursor:pointer;font-size:22px;box-shadow:0 4px 15px rgba(124,58,237,0.4)}
+.sidebar{width:285px;background:linear-gradient(180deg,#4c1d95,#7c3aed,#a78bfa);color:white;height:100vh;position:fixed;left:-285px;top:0;transition:0.3s;padding:26px;z-index:99;overflow-y:auto}
 .sidebar.open{left:0}
-.sidebar img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid white;display:block;margin:20px auto 10px;filter:grayscale(100%)}
-.sidebar h2{text-align:center;font-size:20px}
-.sidebar p{text-align:center;color:#aaa;font-size:12px;margin:8px 0 20px;line-height:1.5}
-.sidebar a{display:block;color:white;text-decoration:none;padding:13px 14px;border-radius:8px;margin:6px 0;border:1px solid #333;font-size:14px;cursor:pointer}
-.sidebar a:hover,.sidebar a.active{background:white;color:black}
-.hire{background:white !important;color:black !important;font-weight:bold;text-align:center}
-.main{max-width:750px;margin:auto;padding:70px 20px 30px;min-height:100vh;text-align:center}
+.sidebar img{width:115px;height:115px;border-radius:50%;object-fit:cover;border:3px solid white;display:block;margin:20px auto 10px}
+.sidebar h2{text-align:center;font-size:21px}
+.sidebar p{text-align:center;color:#e9d5ff;font-size:12px;margin:8px 0 20px;line-height:1.5}
+.sidebar a{display:block;color:white;text-decoration:none;padding:13px 14px;border-radius:10px;margin:6px 0;background:rgba(255,255,255,0.15);font-size:14px;cursor:pointer;border:1px solid rgba(255,255,255,0.2)}
+.sidebar a:hover,.sidebar a.active{background:white;color:#4c1d95;font-weight:bold}
+.hire{background:#facc15 !important;color:#4c1d95 !important;font-weight:bold;text-align:center;border:none !important}
+.main{max-width:780px;margin:auto;padding:70px 20px 30px;min-height:100vh;text-align:center}
 .page{display:none}
-.page.active{display:block}
-.home-pic{width:230px;height:230px;border-radius:50%;object-fit:cover;border:4px solid #111;filter:grayscale(100%);margin:22px auto;display:block}
-.home-name{font-size:44px;letter-spacing:1px;line-height:1.1}
-.home-role{font-size:18px;color:#555;margin-top:10px}
-.welcome{margin-top:14px;font-size:15px;color:#888}
-.about-box{border:1px solid #ddd;border-radius:16px;padding:22px;margin-top:24px;text-align:left}
-.about-box h2{font-size:20px;border-bottom:2px solid #111;padding-bottom:8px;margin-bottom:12px}
-.about-box p{line-height:1.8;color:#333;font-size:14px}
+.page.active{display:block;animation:fade 0.3s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.welcome{background:#ede9fe;color:#7c3aed;padding:7px 14px;border-radius:20px;display:inline-block;font-size:12px;font-weight:bold;letter-spacing:1px}
+.home-name{font-size:46px;line-height:1.1;margin-top:14px;background:linear-gradient(90deg,#4c1d95,#7c3aed,#db2777);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.home-role{font-size:19px;color:#7c3aed;margin-top:8px;font-weight:bold}
+.home-pic{width:240px;height:240px;border-radius:50%;object-fit:cover;border:5px solid #7c3aed;margin:22px auto;display:block;box-shadow:0 10px 30px rgba(124,58,237,0.35)}
+.about-box{background:white;border:1px solid #e9d5ff;border-top:4px solid #7c3aed;border-radius:16px;padding:22px;margin-top:10px;text-align:left;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+.about-box h2{font-size:20px;color:#4c1d95;margin-bottom:12px}
+.about-box p{line-height:1.8;color:#333;font-size:14px;margin-top:8px}
 .left{text-align:left}
-.left h2{font-size:26px;border-left:6px solid #111;padding-left:10px;margin-bottom:16px;text-align:left}
-.card{border:1px solid #ddd;border-radius:14px;padding:18px;margin:12px 0;text-align:left;background:#fafafa}
-.card h3{font-size:16px}
-.card p{color:#444;line-height:1.6;margin-top:6px;font-size:14px}
-.card small{background:#111;color:white;padding:4px 8px;border-radius:20px;font-size:11px}
-.tag{display:inline-block;border:1px solid #111;padding:7px 12px;border-radius:20px;margin:5px 5px 0 0;font-size:13px}
-.btn{display:inline-block;background:#111;color:white;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:14px}
+.left h2{font-size:26px;color:#4c1d95;border-left:6px solid #7c3aed;padding-left:10px;margin-bottom:16px;text-align:left}
+.card{background:white;border:1px solid #e9d5ff;border-radius:14px;padding:18px;margin:12px 0;text-align:left;box-shadow:0 2px 10px rgba(0,0,0,0.04)}
+.card h3{font-size:16px;color:#111}
+.card p{color:#444;line-height:1.7;margin-top:6px;font-size:14px}
+.card small{background:#7c3aed;color:white;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:bold}
+.tag{display:inline-block;background:#ede9fe;color:#4c1d95;border:1px solid #ddd6fe;padding:7px 12px;border-radius:20px;margin:5px 5px 0 0;font-size:13px;font-weight:bold}
+.btn{display:inline-block;background:#7c3aed;color:white;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:14px}
+.click-hint{background:#fef3c7;color:#92400e;padding:8px 12px;border-radius:8px;font-size:12px;margin-top:8px;text-align:center;font-weight:bold}
+.detail{display:none;margin-top:12px;background:#f8f5ff;border:1px dashed #a78bfa;padding:14px;border-radius:10px;font-size:14px;line-height:1.7;color:#333}
+.detail.open{display:block}
 .hint{margin-top:18px;color:#888;font-size:13px}
 </style>
 </head>
@@ -44,43 +48,46 @@ body{background:#fff;color:#111;overflow-x:hidden}
 <div class="sidebar" id="side">
 <img src="photo.jpg" alt="Charukhan">
 <h2>CHARUKHAN E</h2>
-<p>Gen AI Developer<br>Chennai, India</p>
-<a onclick="showPage('home',this)" class="active">Home</a>
-<a onclick="showPage('about',this)">About Me</a>
-<a onclick="showPage('projects',this)">Projects</a>
-<a onclick="showPage('internship',this)">Internships</a>
-<a onclick="showPage('skills',this)">Skills</a>
-<a onclick="showPage('contact',this)">Contact</a>
-<a onclick="showPage('contact',this)" class="hire">HIRE ME →</a>
+<p>Gen AI Developer<br>Python | Java | JavaScript<br>Chennai, India</p>
+<a onclick="showPage('home',this)" class="active">🏠 Home</a>
+<a onclick="showPage('about',this)">👤 About Me</a>
+<a onclick="showPage('projects',this)">🚀 Projects</a>
+<a onclick="showPage('internship',this)">💼 Internships - Click to Expand</a>
+<a onclick="showPage('skills',this)">💻 Skills</a>
+<a onclick="showPage('contact',this)">📩 Contact</a>
+<a onclick="showPage('contact',this)" class="hire">⭐ HIRE ME</a>
 </div>
 
 <div class="main">
 
-<!-- HOME - ITHU MATTUM THAAN FIRST LA VARUM -->
+<!-- HOME -->
 <div id="home" class="page active">
-<p class="welcome">WELCOME TO MY PAGE</p>
+<span class="welcome">✦ WELCOME TO MY PAGE ✦</span>
 <h1 class="home-name">CHARUKHAN E</h1>
 <p class="home-role">Gen AI Developer</p>
 <img src="photo.jpg" class="home-pic" alt="Charukhan">
 <div class="about-box">
 <h2>About Me - In Short</h2>
-<p>Hello, I am <b>Charukhan E</b> from Chennai, Tamil Nadu. I am a B.E. Electronics and Communication Engineering graduate (2026) from Loyola Institute of Technology, with CGPA 8.6/10.</p>
-<p>I am an aspiring Software Developer focused on <b>Python, Java, JavaScript and Generative AI</b>. I love building real, useful projects, not just theory.</p>
-<p>I have built AI-based agriculture projects, a Smart India Hackathon project, and a Final Year Project on Wireless Charging for Electric Vehicles. I have also completed 5 industry internships.</p>
-<p>My goal is simple: learn by building, and get a Software Development / GenAI role where I can grow and contribute.</p>
-<p><b>Click the 3 lines on top left to see my Projects, Skills and Contact.</b></p>
+<p>Hello, I am <b>Charukhan E</b> from Chennai. I am a B.E. Electronics and Communication Engineering graduate (2026) from <b>Loyola Institute of Technology</b>, with <b>CGPA 8.6/10</b>.</p>
+<p>I am an aspiring <b>Software Developer</b> focused on <b>Python, Java, JavaScript and Generative AI</b>. I don't just study theory, I love to build real projects that solve real problems.</p>
+<p>I built an <b>AI Platform for Smart Agriculture</b>, a <b>Smart India Hackathon project on Crop Health</b>, and my Final Year Project on <b>Wireless Charging for Electric Vehicles</b> which was presented at an International Conference.</p>
+<p>I have completed <b>5 industry internships</b> in Automation, Electrical, Logistics and Quality. My goal is to get a Software / GenAI role and grow as a developer who builds AI-powered products.</p>
+<p><b>Left side 3 lines ah click pannu - Projects, Internships ellam anga thaan irukku.</b></p>
 </div>
-<p class="hint">☰ Left side menu ah click pannu - Projects, Skills ellam anga thaan irukku</p>
+<p class="hint">☰ Menu ah click pannu - One by one paakalam</p>
 </div>
 
 <!-- ABOUT -->
 <div id="about" class="page">
 <div class="left">
-<h2>About Me</h2>
+<h2>About Me - Full Story</h2>
 <div class="card">
-<p><b>Charukhan E</b> is an ECE graduate (2026) from Loyola Institute of Technology, Chennai, with hands-on experience in software and AI-based academic projects.</p>
-<p style="margin-top:10px">Proficient in Python, Java and JavaScript, with Generative AI and AI/ML concepts through certified coursework. Strong problem-solving skills, backed by certified training.</p>
-<p style="margin-top:10px"><b>Education:</b> B.E. ECE - Loyola Institute of Technology - CGPA 8.6/10 - 2022 to 2026<br><b>HSC:</b> JMJ Matriculation - 76.8% - 2022<br><b>SSLC:</b> Sri Sankara Vidyalaya - 81.8% - 2020<br><b>Languages:</b> Tamil, English<br><b>Location:</b> Chennai, Tamil Nadu, India</p>
+<p>I am <b>Charukhan E</b>, a curious and hardworking developer from Chennai. My journey started in ECE, but my heart went to Software and AI.</p>
+<p style="margin-top:10px">In college, I realised marks alone are not enough. So I started building. I learnt Python, Java, JavaScript, then Generative AI, Prompt Engineering, AI/ML fundamentals from NPTEL IISc Bangalore.</p>
+<p style="margin-top:10px">Today I can build web apps, AI tools, dashboards and IoT projects. I have worked in real companies during internships, seen how factories work, how logistics work, how quality is checked. That real experience makes me different from others who only have certificates.</p>
+<p style="margin-top:10px"><b>Education:</b><br>B.E. ECE - Loyola Institute of Technology - CGPA 8.6/10 - 2022 to 2026<br>HSC - JMJ Matriculation - 76.8% - 2022<br>SSLC - Sri Sankara Vidyalaya - 81.8% - 2020</p>
+<p style="margin-top:10px"><b>What I Believe:</b> Learn by building. Build to get hired. Never stop learning.</p>
+<p style="margin-top:10px"><b>Languages:</b> Tamil, English | <b>Location:</b> Chennai, Tamil Nadu</p>
 </div>
 </div>
 </div>
@@ -88,33 +95,60 @@ body{background:#fff;color:#111;overflow-x:hidden}
 <!-- PROJECTS -->
 <div id="projects" class="page">
 <div class="left">
-<h2>Projects</h2>
-<div class="card"><small>FINAL YEAR PROJECT</small><h3 style="margin-top:8px">Smart Charging System for EVs Using Wireless Power Transfer</h3><p>Real-time web dashboard for monitoring wireless charging data and automated parking / travel charging modes. Presented paper at International Conference RATSTEm-2026.</p><p><b>Tech:</b> Embedded C, Python, IoT, Wireless Power Transfer</p></div>
-<div class="card"><small>AI / PYTHON / STREAMLIT</small><h3 style="margin-top:8px">AI-Integrated Platform for Smart Agriculture</h3><p>Python / Streamlit web app for crop yield prediction and leaf disease diagnosis, with NDVI-based analysis and e-marketplace module for farmers.</p></div>
-<div class="card"><small>SMART INDIA HACKATHON - SIH</small><h3 style="margin-top:8px">AI-Powered Crop Health Monitoring</h3><p>Application using multispectral / hyperspectral imaging with cloud-based data analytics pipeline for pest and soil risk monitoring.</p></div>
-<div class="card"><small>EMBEDDED / PLC</small><h3 style="margin-top:8px">Modern Touch-Sensor RGB LED Smart Table</h3><p>Control firmware with PLC-based touch sensor input and RGB LED logic for interactive lighting response.</p></div>
-<div class="card"><small>IOT / RASPBERRY PI</small><h3 style="margin-top:8px">Smart Home Lighting Automation</h3><p>Automated home lighting with sensor-based triggers and remote monitoring via mini network.</p></div>
+<h2>My Projects - Real Work</h2>
+<div class="card"><small>FINAL YEAR PROJECT • MOST IMPORTANT</small><h3 style="margin-top:8px">Smart Charging System for EVs Using Wireless Power Transfer</h3><p>This is my final year project. Problem is simple: EV charging la wire, waiting time, parking problem. My solution is wireless charging - car ah parking la niruthina pothum, thaniya charge aagum, travelling la kooda charge aagum.</p><p>I built a real-time web dashboard to monitor charging data, battery level, parking mode and travel mode. This project was selected and I <b>presented a paper at International Conference RATSTEm-2026</b>.</p><p><b>Tech:</b> Embedded C, Python, IoT, Wireless Power Transfer, Real-Time Monitoring</p></div>
+<div class="card"><small>AI • PYTHON • STREAMLIT</small><h3 style="margin-top:8px">AI-Integrated Platform for Smart Agriculture</h3><p>Farmers ku oru full platform. Crop yield ah predict pannum - intha season la evlo vilayum nu. Leaf photo ah upload panna, leaf la disease irukka nu sollum. NDVI analysis vechu plant healthy ah illa nu paakum. Aprom farmers direct ah sell panna oru e-marketplace um irukku.</p><p><b>Tech:</b> Python, Streamlit, AI/ML, NDVI</p><p><b>Impact:</b> Farmers ku technology ah easy ah kondu poi serkanum nu thaan itha pannen.</p></div>
+<div class="card"><small>SMART INDIA HACKATHON - SIH</small><h3 style="margin-top:8px">AI-Powered Crop Health Monitoring</h3><p>Smart India Hackathon ku build panna project. Normal camera illa, multispectral / hyperspectral imaging use panni crop ah scan pannuvom. Cloud la data poi analyse aagi, pest risk, soil risk irukka nu munadiye warning kudukum.</p><p><b>Tech:</b> AI, Cloud, Data Analytics, Imaging</p><p><b>Learning:</b> Hackathon la team ah work panna, time ku ulla build panna kathukiten.</p></div>
+<div class="card"><small>EMBEDDED • PLC</small><h3 style="margin-top:8px">Modern Touch-Sensor RGB LED Smart Table</h3><p>Table ah touch panna light maarum. PLC logic vechu touch sensor input ah eduthu, RGB LED ah control pannen. Interactive lighting ku oru stylish idea.</p><p><b>Tech:</b> PLC, Embedded, Touch Sensor, RGB LED</p></div>
+<div class="card"><small>IOT • RASPBERRY PI</small><h3 style="margin-top:8px">Smart Home Lighting Automation</h3><p>Veetla yaarum illana light thaniya off aagum, yaaravathu vantha on aagum. Sensor based trigger, aprom phone la irunthu remote ah monitor panna mudiyum. Mini network vechu pannen.</p><p><b>Tech:</b> Raspberry Pi, IoT, Sensors</p></div>
 </div>
 </div>
 
-<!-- INTERNSHIP -->
+<!-- INTERNSHIP - CLICK TO EXPAND -->
 <div id="internship" class="page">
 <div class="left">
-<h2>Internships - 5 Companies</h2>
-<div class="card"><h3>DNA Engineering - PLC Automation</h3><p>Chip board manufacturing, PLC logic development, I/O mapping, automation testing.</p></div>
-<div class="card"><h3>Schneider Electric</h3><p>Preventive maintenance, electrical inspection, fault documentation.</p></div>
-<div class="card"><h3>Flipkart</h3><p>Logistics operations, inventory tracking, order validation.</p></div>
-<div class="card"><h3>Wipro Infrastructure</h3><p>Hydraulic component testing, inspection, documentation.</p></div>
-<div class="card"><h3>Sungwoo Hitech (Hyundai)</h3><p>Quality inspection, NCR documentation, corrective support.</p></div>
+<h2>Internships - Click Each One</h2>
+<p class="click-hint">👇 Oru internship ah click panna, athula naan enna pannen nu full detail viriyum</p>
+
+<div class="card" onclick="openDetail('d1')" style="cursor:pointer">
+<small>PLC AUTOMATION • 1</small>
+<h3 style="margin-top:8px">DNA Engineering - PLC Automation ▼ Click to See Details</h3>
+<div id="d1" class="detail"><b>DNA Engineering na enna?</b><br>Chip board manufacturing company. Factory la machine ah automatic ah work panna vaikura company.<br><br><b>Naan enna pannen?</b><br>- PLC logic development pannen, machine eppadi work aaganum nu program ezhuthinen<br>- I/O mapping pannen - sensor enga connect aaguthu, motor enga nu map pannen<br>- Automation testing pannen - machine correct ah work aagutha nu test pannen<br><br><b>Enna kathukiten?</b> Real factory la automation eppadi work aaguthu, PLC na summa theory illa, real life la eppadi use aaguthu nu kathukiten.</div>
+</div>
+
+<div class="card" onclick="openDetail('d2')" style="cursor:pointer">
+<small>ELECTRICAL • 2</small>
+<h3 style="margin-top:8px">Schneider Electric ▼ Click to See Details</h3>
+<div id="d2" class="detail"><b>Schneider Electric na enna?</b><br>World famous electrical company. Switch, breaker, electrical systems ellam pannuvanga.<br><br><b>Naan enna pannen?</b><br>- Preventive maintenance pannen - problem vara munnadiye check panni sari pannen<br>- Electrical inspection pannen - wiring, panel ellam safe ah irukka nu paathen<br>- Fault documentation pannen - enna fault vanthuchu, eppadi sari pannom nu report ezhuthinen<br><br><b>Enna kathukiten?</b> Safety, documentation, systematic ah work panna kathukiten.</div>
+</div>
+
+<div class="card" onclick="openDetail('d3')" style="cursor:pointer">
+<small>LOGISTICS • 3</small>
+<h3 style="margin-top:8px">Flipkart ▼ Click to See Details</h3>
+<div id="d3" class="detail"><b>Flipkart na enna?</b><br>India oda periya e-commerce company. Daily lakhs of orders pogum.<br><br><b>Naan enna pannen?</b><br>- Logistics operations la work pannen - order enga irunthu enga poguthu nu track pannen<br>- Inventory tracking pannen - stock irukka illaya nu check pannen<br>- Order validation pannen - order correct ah irukka, address correct ah nu verify pannen<br><br><b>Enna kathukiten?</b> Fast ah work panna, system la data correct ah maintain panna, customer ku time ku delivery panna enna pannanum nu kathukiten.</div>
+</div>
+
+<div class="card" onclick="openDetail('d4')" style="cursor:pointer">
+<small>TESTING • 4</small>
+<h3 style="margin-top:8px">Wipro Infrastructure ▼ Click to See Details</h3>
+<div id="d4" class="detail"><b>Wipro Infrastructure na enna?</b><br>Hydraulic components, heavy machinery parts pannura division.<br><br><b>Naan enna pannen?</b><br>- Hydraulic component testing pannen - pressure, leakage ellam test pannen<br>- Inspection pannen - part correct measurement la irukka nu paathen<br>- Documentation pannen - test results ah report ah ezhuthinen<br><br><b>Enna kathukiten?</b> Quality na enna, oru chinna mistake kooda periya problem aagum nu purinjikiten.</div>
+</div>
+
+<div class="card" onclick="openDetail('d5')" style="cursor:pointer">
+<small>QUALITY • HYUNDAI • 5</small>
+<h3 style="margin-top:8px">Sungwoo Hitech (Hyundai) ▼ Click to See Details</h3>
+<div id="d5" class="detail"><b>Sungwoo Hitech na enna?</b><br>Hyundai car ku parts supply pannura company. Car body parts ellam pannuvanga.<br><br><b>Naan enna pannen?</b><br>- Quality inspection pannen - car parts la defect irukka nu check pannen<br>- NCR documentation pannen - Non-Conformance Report, defect vantha atha record pannen<br>- Corrective support kuduthen - defect eppadi sari pannanum nu team ku help pannen<br><br><b>Enna kathukiten?</b> Hyundai maari periya company la quality eppadi maintain pannuvanga, discipline eppadi irukkum nu nerla paathen. Ithu en career ku romba useful.</div>
+</div>
+
 </div>
 </div>
 
 <!-- SKILLS -->
 <div id="skills" class="page">
 <div class="left">
-<h2>Skills</h2>
-<div class="card"><p><b>Programming:</b></p><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">Embedded C</span><p style="margin-top:14px"><b>AI / GenAI:</b></p><span class="tag">Generative AI</span><span class="tag">Prompt Engineering</span><span class="tag">AI/ML - NPTEL IISc</span><span class="tag">Certified GenAI - TechPanda</span><p style="margin-top:14px"><b>Tools:</b></p><span class="tag">PyCharm</span><span class="tag">Streamlit</span><span class="tag">VS Code</span><span class="tag">MATLAB</span><span class="tag">Git</span><span class="tag">Zoho Creator</span></div>
-<div class="card"><h3>Certifications</h3><p>Certified Generative AI - TechPanda • Zoho Creator - Young Creators Program (2025) • AI Concepts - NPTEL, IISc Bangalore (2025) • GenAI Workshop - IBM Partner (2023) • Core Java - DevTown (2024) • Aptitude Training 40 hrs - AptrikZ (2025)</p><p style="margin-top:8px"><b>Achievements:</b> Paper at RATSTEm-2026 • Smart India Hackathon Participant • 5 Internships</p></div>
+<h2>Skills & Certifications</h2>
+<div class="card"><p><b>Programming Languages:</b></p><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">Embedded C</span><p style="margin-top:14px"><b>AI / GenAI:</b></p><span class="tag">Generative AI</span><span class="tag">Prompt Engineering</span><span class="tag">AI/ML - NPTEL IISc</span><span class="tag">Certified GenAI - TechPanda</span><p style="margin-top:14px"><b>Tools:</b></p><span class="tag">PyCharm</span><span class="tag">Streamlit</span><span class="tag">VS Code</span><span class="tag">MATLAB</span><span class="tag">Git</span><span class="tag">Zoho Creator</span></div>
+<div class="card"><h3>Certifications - Full List</h3><p>• Certified Generative AI - TechPanda<br>• Zoho Creator Student Training - Young Creators Program (2025)<br>• Artificial Intelligence: Concepts and Techniques - NPTEL, IISc Bangalore (2025)<br>• GenAI Workshop - Object Automation / IBM Partner (2023)<br>• Core Concepts of Java - DevTown (2024)<br>• Placement Aptitude Training 40 hrs - AptrikZ (2025)</p><p style="margin-top:8px"><b>Achievements:</b> Paper at RATSTEm-2026 International Conference • Smart India Hackathon Participant • 5 Industry Internships Completed</p></div>
 </div>
 </div>
 
@@ -122,11 +156,11 @@ body{background:#fff;color:#111;overflow-x:hidden}
 <div id="contact" class="page">
 <div class="left">
 <h2>Contact - Hire Me</h2>
-<div class="card" style="background:#111;color:white;text-align:center">
+<div class="card" style="background:linear-gradient(135deg,#4c1d95,#7c3aed);color:white;text-align:center;border:none">
 <h3 style="color:white;font-size:20px">Open to Software / GenAI Roles</h3>
-<p style="color:#ccc;margin-top:10px">Email: charukhancharukh@gmail.com<br>Phone: 8220787480<br>LinkedIn: linkedin.com/in/charukhan-e-16372b307<br>Location: Chennai, Tamil Nadu, India</p>
-<a href="mailto:charukhancharukh@gmail.com" class="btn" style="background:white;color:black">Send Email</a><br>
-<a href="https://www.linkedin.com/in/charukhan-e-16372b307/" class="btn" style="background:transparent;color:white;border:1px solid white">LinkedIn Profile</a>
+<p style="color:#e9d5ff;margin-top:10px">Email: charukhancharukh@gmail.com<br>Phone: 8220787480<br>LinkedIn: linkedin.com/in/charukhan-e-16372b307<br>Location: Chennai, Tamil Nadu, India</p>
+<a href="mailto:charukhancharukh@gmail.com" class="btn" style="background:white;color:#4c1d95">Send Email</a><br>
+<a href="https://www.linkedin.com/in/charukhan-e-16372b307/" class="btn" style="background:#facc15;color:#111">LinkedIn Profile</a>
 </div>
 </div>
 </div>
@@ -143,6 +177,9 @@ document.querySelectorAll('.sidebar a').forEach(a=>a.classList.remove('active'))
 if(el) el.classList.add('active');
 document.getElementById('side').classList.remove('open');
 window.scrollTo(0,0);
+}
+function openDetail(id){
+document.getElementById(id).classList.toggle('open');
 }
 </script>
 </body>
