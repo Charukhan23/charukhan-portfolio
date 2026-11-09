@@ -29,19 +29,26 @@ body{background:#0b0713;color:white}
 .about-box b{color:white}
 .left{text-align:left}
 .left h2{font-size:26px;color:white;border-left:6px solid #a855f7;padding-left:10px;margin-bottom:16px;text-align:left}
+.section-title{font-size:19px;color:#c084fc;margin:26px 0 8px;font-weight:bold}
 .card{background:#171126;border:1px solid #2e1a52;border-radius:14px;padding:18px;margin:12px 0;text-align:left}
 .card h3{font-size:16px;color:white}
 .card p{color:#d1d5db;line-height:1.7;margin-top:6px;font-size:14px}
 .card b{color:white}
 .card small{background:#a855f7;color:white;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:bold}
-.card small.black{background:#000;border:1px solid #a855f7}
 .tag{display:inline-block;background:#2e1a52;color:#e9d5ff;border:1px solid #7c3aed;padding:7px 12px;border-radius:20px;margin:5px 5px 0 0;font-size:13px;font-weight:bold}
 .btn{display:inline-block;background:#a855f7;color:white;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:14px}
 .btn-black{display:inline-block;background:white;color:#111;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:14px}
+.btn-outline{display:inline-block;background:transparent;color:#c084fc;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:10px;border:1px solid #a855f7;font-size:13px}
 .click-hint{background:#2e1a52;color:#e9d5ff;padding:10px 12px;border-radius:8px;font-size:13px;margin-top:8px;text-align:center;font-weight:bold}
 .detail{display:none;margin-top:12px;background:#0b0713;border:1px dashed #a855f7;padding:14px;border-radius:10px;font-size:14px;line-height:1.7;color:#d1d5db}
 .detail.open{display:block}
 .hint{margin-top:18px;color:#9ca3af;font-size:13px}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini{background:#171126;border:1px solid #2e1a52;border-radius:12px;padding:14px;text-align:left}
+.mini h4{font-size:14px;color:white;line-height:1.4}
+.mini p{font-size:12px;color:#d1d5db;line-height:1.6;margin-top:6px}
+.mini a{color:#c084fc;font-size:12px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:8px}
+@media(max-width:600px){.mini-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -96,11 +103,38 @@ body{background:#0b0713;color:white}
 <div id="projects" class="page">
 <div class="left">
 <h2>🚀 My Projects</h2>
+<p style="color:#d1d5db;font-size:14px;line-height:1.7">My projects are divided into 3 categories - College Projects, Gen AI Projects, and TechPanda Python Practice Projects. Click on GitHub to view the code.</p>
+<a href="https://github.com/Charukhan23" target="_blank" class="btn-outline">🔗 View All Projects on GitHub - github.com/Charukhan23</a>
+
+<div class="section-title">🤖 Gen AI Projects</div>
+<div class="card"><small>⭐ GEN AI</small><h3 style="margin-top:8px">Smart Role Matcher</h3><p>A Python based Role Recommendation System. It matches a student profile using CGPA and skills and suggests the most suitable job roles.</p><p><b>🛠️ Technologies:</b> Python, Skills Matching, CGPA Logic</p><a href="https://github.com/Charukhan23" target="_blank" class="btn-outline">View on GitHub →</a></div>
+
+<div class="section-title">🎓 College Projects</div>
 <div class="card"><small>⭐ FINAL YEAR PROJECT</small><h3 style="margin-top:8px">Smart Charging System for EVs Using Wireless Power Transfer</h3><p>This is my final year project. The problem is simple: EV charging has issues with wires, waiting time and parking. My solution is wireless charging. When a car is parked, it starts charging automatically. It also supports charging while travelling.</p><p>I built a real-time web dashboard to monitor charging data, battery level, parking mode and travel mode. This project was selected and I <b>presented a paper at the International Conference RATSTEm-2026</b>.</p><p><b>🛠️ Technologies:</b> Embedded C, Python, IoT, Wireless Power Transfer, Real-Time Monitoring</p></div>
 <div class="card"><small>🤖 AI / PYTHON / STREAMLIT</small><h3 style="margin-top:8px">AI-Integrated Platform for Smart Agriculture</h3><p>A complete platform for farmers. It predicts crop yield for the season. If a farmer uploads a leaf photo, it detects leaf disease. It uses NDVI-based analysis to check if the plant is healthy. It also includes an e-marketplace module where farmers can sell directly.</p><p><b>🛠️ Technologies:</b> Python, Streamlit, AI / ML, NDVI</p><p><b>🎯 Impact:</b> My aim was to bring technology to farmers in a simple and useful way.</p></div>
 <div class="card"><small>🏆 SMART INDIA HACKATHON - SIH</small><h3 style="margin-top:8px">AI-Powered Crop Health Monitoring</h3><p>A project built for Smart India Hackathon. Instead of a normal camera, it uses multispectral / hyperspectral imaging to scan crops. The data goes to a cloud-based analytics pipeline, which gives early warnings about pest risk and soil risk.</p><p><b>🛠️ Technologies:</b> AI, Cloud, Data Analytics, Imaging</p><p><b>📚 Learning:</b> I learned to work in a team and build under time pressure in a hackathon.</p></div>
 <div class="card"><small>💡 EMBEDDED / PLC</small><h3 style="margin-top:8px">Modern Touch-Sensor RGB LED Smart Table</h3><p>A smart table that changes light when you touch it. I designed control firmware with PLC-based touch sensor input and RGB LED logic for interactive lighting response.</p><p><b>🛠️ Technologies:</b> PLC, Embedded, Touch Sensor, RGB LED</p></div>
 <div class="card"><small>🏠 IOT / RASPBERRY PI</small><h3 style="margin-top:8px">Smart Home Lighting Automation</h3><p>Home lighting that turns off automatically when no one is in the room, and turns on when someone enters. It uses sensor-based triggers and remote monitoring through a mini network.</p><p><b>🛠️ Technologies:</b> Raspberry Pi, IoT, Sensors</p></div>
+
+<div class="section-title">📚 TechPanda - Python Practice Projects - From GitHub</div>
+<p style="color:#d1d5db;font-size:13px;line-height:1.7;margin-bottom:12px">These are hands-on Python projects I built during my TechPanda Generative AI course to master OOP, Functions, Abstraction and Data Structures. All code is on my GitHub profile: github.com/Charukhan23</p>
+<div class="mini-grid">
+<div class="mini"><h4>Library Management</h4><p>I built a Library Management System in Python using inheritance.</p><a href="https://github.com/Charukhan23/Library_Management" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Cab Booking Fare Management System</h4><p>Build the application step by step, test every function in Python.</p><a href="https://github.com/Charukhan23/Cab_Booking_Fare_Management_System" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Payment Gateway Abstraction</h4><p>I built a payment system in Python using abstraction.</p><a href="https://github.com/Charukhan23/Payment_Gateway_Abstraction" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Payment Gateway MiniTask</h4><p>I built a mini payment gateway in Python using classes.</p><a href="https://github.com/Charukhan23/Payment_Gateway_MiniTask" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Online Shopping Cart</h4><p>A Python-based online shopping cart module designed to handle customers and orders.</p><a href="https://github.com/Charukhan23/Online-shopping-cart" target="_blank">View Code →</a></div>
+<div class="mini"><h4>SPOTIFY-PLAYLIST</h4><p>A Python based application that integrates with the Spotify Web API to automate playlists.</p><a href="https://github.com/Charukhan23/SPOTIFY-PLAYLIST" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Class Bank Account</h4><p>Using Class in Python code I created a bank account, withdrawal, balance check.</p><a href="https://github.com/Charukhan23/Class_Bank_account" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Notification System using Abstraction</h4><p>I built a notification system in Python using abstraction.</p><a href="https://github.com/Charukhan23/Notification_system_using_abstraction" target="_blank">View Code →</a></div>
+<div class="mini"><h4>ATM PIN SIMULATION</h4><p>Simulation of ATM pin and proceed 3 attempts, if more than 3 attempts it blocks.</p><a href="https://github.com/Charukhan23/ATM_PIN_SIMULATION" target="_blank">View Code →</a></div>
+<div class="mini"><h4>EB BILL CALCULATOR</h4><p>Calculating EB Bill like tariff, subsidy and offers.</p><a href="https://github.com/Charukhan23/EB_BILL_CALCULATOR" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Blood Donation Details Rules</h4><p>Blood donation details and what are the rules should be followed.</p><a href="https://github.com/Charukhan23/blood_donation_details_rules" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Friendly Food Order Management</h4><p>Collecting customer details, handling strings, working with orders.</p><a href="https://github.com/Charukhan23/Friendly-food-order-management-system" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Calculate Employee Bonus</h4><p>Calculating employees bonus based on rating and salary.</p><a href="https://github.com/Charukhan23/calculate_employee_bonus" target="_blank">View Code →</a></div>
+<div class="mini"><h4>Guessing Secret Numbers</h4><p>A Python code used to find the guessing number game.</p><a href="https://github.com/Charukhan23/Guessing_Secret_numbers" target="_blank">View Code →</a></div>
+</div>
+
 </div>
 </div>
 
@@ -108,44 +142,38 @@ body{background:#0b0713;color:white}
 <div class="left">
 <h2>💼 Internships</h2>
 <p class="click-hint">👇 Click one internship to see full details</p>
-
 <div class="card" onclick="openDetail('d1')" style="cursor:pointer">
 <small>⚙️ PLC AUTOMATION - 1</small>
 <h3 style="margin-top:8px">DNA Engineering - PLC Automation ▼ Click to See Details</h3>
 <div id="d1" class="detail"><b>🏢 What is DNA Engineering?</b><br>A chip board manufacturing company. It works on factory automation, where machines work automatically.<br><br><b>✅ What I Did:</b><br>- Developed PLC logic for machine operations<br>- Did I/O mapping - mapping sensors, motors and inputs<br>- Did automation testing - checked if machines work correctly<br><br><b>🎓 What I Learned:</b> How automation works in a real factory, and how PLC is used in real life, not just theory.</div>
 </div>
-
 <div class="card" onclick="openDetail('d2')" style="cursor:pointer">
 <small>⚡ ELECTRICAL - 2</small>
 <h3 style="margin-top:8px">Schneider Electric ▼ Click to See Details</h3>
 <div id="d2" class="detail"><b>🏢 What is Schneider Electric?</b><br>A world-famous electrical company. It manufactures switches, breakers and electrical systems.<br><br><b>✅ What I Did:</b><br>- Preventive maintenance - checking systems before a problem occurs<br>- Electrical inspection - checking wiring and panels for safety<br>- Fault documentation - recording faults and how they were fixed<br><br><b>🎓 What I Learned:</b> Safety, documentation, and working in a systematic way.</div>
 </div>
-
 <div class="card" onclick="openDetail('d3')" style="cursor:pointer">
 <small>📦 LOGISTICS - 3</small>
 <h3 style="margin-top:8px">Flipkart ▼ Click to See Details</h3>
 <div id="d3" class="detail"><b>🏢 What is Flipkart?</b><br>One of India's largest e-commerce companies. Lakhs of orders are processed every day.<br><br><b>✅ What I Did:</b><br>- Worked in logistics operations - tracking orders from source to destination<br>- Inventory tracking - checking stock availability<br>- Order validation - verifying orders and addresses<br><br><b>🎓 What I Learned:</b> How to work fast, maintain correct data in a system, and deliver on time for customers.</div>
 </div>
-
 <div class="card" onclick="openDetail('d4')" style="cursor:pointer">
 <small>🔧 TESTING - 4</small>
 <h3 style="margin-top:8px">Wipro Infrastructure ▼ Click to See Details</h3>
 <div id="d4" class="detail"><b>🏢 What is Wipro Infrastructure?</b><br>A division that works on hydraulic components and heavy machinery parts.<br><br><b>✅ What I Did:</b><br>- Hydraulic component testing - testing pressure and leakage<br>- Inspection - checking if parts meet correct measurements<br>- Documentation - writing test results as reports<br><br><b>🎓 What I Learned:</b> What quality really means, and how one small mistake can create a big problem.</div>
 </div>
-
 <div class="card" onclick="openDetail('d5')" style="cursor:pointer">
 <small>🚗 QUALITY - HYUNDAI - 5</small>
 <h3 style="margin-top:8px">Sungwoo Hitech (Hyundai) ▼ Click to See Details</h3>
 <div id="d5" class="detail"><b>🏢 What is Sungwoo Hitech?</b><br>A company that supplies parts for Hyundai cars, mainly car body parts.<br><br><b>✅ What I Did:</b><br>- Quality inspection - checking car parts for defects<br>- NCR documentation - Non-Conformance Report, recording defects<br>- Corrective support - helping the team fix defects<br><br><b>🎓 What I Learned:</b> How a large company like Hyundai maintains quality, discipline and process. This was very useful for my career.</div>
 </div>
-
 </div>
 </div>
 
 <div id="skills" class="page">
 <div class="left">
 <h2>💻 Skills</h2>
-<div class="card"><p><b>💻 Programming Languages:</b></p><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">Embedded C</span><p style="margin-top:14px"><b>🤖 AI / GenAI:</b></p><span class="tag">Generative AI</span><span class="tag">Prompt Engineering</span><span class="tag">AI / ML - NPTEL IISc</span><span class="tag">Certified GenAI - TechPanda</span><p style="margin-top:14px"><b>🛠️ Tools:</b></p><span class="tag">PyCharm</span><span class="tag">Streamlit</span><span class="tag">VS Code</span><span class="tag">MATLAB</span><span class="tag">Git</span><span class="tag">Zoho Creator</span></div>
+<div class="card"><p><b>💻 Programming Languages:</b></p><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">Embedded C</span><p style="margin-top:14px"><b>🤖 AI / GenAI:</b></p><span class="tag">Generative AI</span><span class="tag">Prompt Engineering</span><span class="tag">AI / ML - NPTEL IISc</span><span class="tag">Certified GenAI - TechPanda</span><p style="margin-top:14px"><b>🛠️ Tools:</b></p><span class="tag">PyCharm</span><span class="tag">Streamlit</span><span class="tag">VS Code</span><span class="tag">MATLAB</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Zoho Creator</span></div>
 <div class="card"><h3>🏆 Certifications</h3><p>✅ Certified Generative AI - TechPanda<br>✅ Zoho Creator Student Training - Young Creators Program (2025)<br>✅ Artificial Intelligence: Concepts and Techniques - NPTEL, IISc Bangalore (2025)<br>✅ GenAI Workshop - Object Automation / IBM Partner (2023)<br>✅ Core Concepts of Java - DevTown (2024)<br>✅ Placement Aptitude Training 40 hrs - AptrikZ (2025)</p><p style="margin-top:8px"><b>🌟 Achievements:</b> Paper at RATSTEm-2026 International Conference, Smart India Hackathon Participant, 5 Industry Internships Completed</p></div>
 </div>
 </div>
@@ -155,9 +183,10 @@ body{background:#0b0713;color:white}
 <h2>📩 Contact - Hire Me</h2>
 <div class="card" style="background:#1e1233;color:white;text-align:center;border:1px solid #7c3aed">
 <h3 style="color:white;font-size:20px">🚀 Open to Software / GenAI Roles</h3>
-<p style="color:#e9d5ff;margin-top:10px">📧 Email: charukhancharukh@gmail.com<br>📞 Phone: 8220787480<br>🔗 LinkedIn: linkedin.com/in/charukhan-e-16372b307<br>📍 Location: Chennai, Tamil Nadu, India</p>
+<p style="color:#e9d5ff;margin-top:10px">📧 Email: charukhancharukh@gmail.com<br>📞 Phone: 8220787480<br>🔗 LinkedIn: linkedin.com/in/charukhan-e-16372b307<br>💻 GitHub: github.com/Charukhan23<br>📍 Location: Chennai, Tamil Nadu, India</p>
 <a href="mailto:charukhancharukh@gmail.com" class="btn">📧 Send Email</a><br>
-<a href="https://www.linkedin.com/in/charukhan-e-16372b307/" class="btn-black">🔗 LinkedIn Profile</a>
+<a href="https://www.linkedin.com/in/charukhan-e-16372b307/" class="btn-black">🔗 LinkedIn Profile</a><br>
+<a href="https://github.com/Charukhan23" target="_blank" class="btn">💻 GitHub Profile</a>
 </div>
 </div>
 </div>
